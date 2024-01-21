@@ -1,0 +1,320 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1395px;
+  margin: 0 auto;
+  list-style: none;
+}
+.wrapper .media__footer {
+  display: none;
+}
+
+.header {
+  background: url(./assets/images/image\ 1\ \(1\).png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.header__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+.header__navbar .fa-bars {
+  display: none;
+}
+.header__navbar_logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+.header__navbar_navigations li {
+  display: flex;
+  gap: 20px;
+}
+.header__navbar_navigations li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20;
+  font-weight: 400;
+}
+.header__navbar_navigations li a:hover {
+  border-bottom: 1px solid white;
+}
+.header__world {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 100px;
+}
+.header__world_logo {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 800;
+  margin-top: 70px;
+}
+.header__world_search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding: 15px 25px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(17.7124652863px);
+          backdrop-filter: blur(17.7124652863px);
+}
+.header__world_search-destination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 418px;
+}
+.header__world_search-destination input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.header__world_search-destination input::-moz-placeholder {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+}
+.header__world_search-destination input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+}
+.header__world_search-destination input::placeholder {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+}
+.header__world_search-destination .fa-magnifying-glass {
+  color: #fff;
+  font-size: 16px;
+}
+.header__world_search-check {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.header__world_search-check h2 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+}
+.header__world_search-check .fa-calendar {
+  color: #fff;
+}
+.header__world_search-people {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.header__world_search-people h2 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+}
+.header__world_search-people .fa-user {
+  color: #fff;
+}
+.header__world_search-btn {
+  display: flex;
+}
+.header__world_search-btn button {
+  padding: 5px 30px;
+  border: none;
+  border-radius: 20px;
+  color: #2659C3;
+  font-size: 15px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .wrapper {
+    max-width: 375px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .wrapper .media__footer {
+    position: absolute;
+    bottom: 0;
+    display: inline-flex;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 5px;
+    background-color: #fff;
+    width: 100%;
+  }
+  .wrapper .media__footer .footer-functions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .wrapper .media__footer .footer-functions:hover {
+    color: #2659C3;
+  }
+  .wrapper .media__footer .footer-functions h1 {
+    color: #999999;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .wrapper .media__footer .footer-functions .fa-solid {
+    font-size: 22px;
+    color: #999999;
+  }
+  .wrapper .header {
+    display: flex;
+    padding: 10px 15px;
+    flex-direction: column;
+  }
+  .wrapper .header__navbar {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .wrapper .header__navbar .fa-bars {
+    display: inline-flex;
+    font-size: 25px;
+    color: #fff;
+  }
+  .wrapper .header__navbar_logo {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+  }
+  .wrapper .header__navbar_navigations {
+    display: none;
+  }
+  .wrapper .header__world {
+    padding: 0;
+  }
+  .wrapper .header__world_logo {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 800;
+  }
+  .wrapper .header__world_search {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 18px;
+    background-color: transparent;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+  .wrapper .header__world_search-destination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(17.7124652863px);
+            backdrop-filter: blur(17.7124652863px);
+  }
+  .wrapper .header__world_search-destination input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+  }
+  .wrapper .header__world_search-destination input::-moz-placeholder {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .wrapper .header__world_search-destination input:-ms-input-placeholder {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .wrapper .header__world_search-destination input::placeholder {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .wrapper .header__world_search-destination .fa-magnifying-glass {
+    color: #fff;
+    font-size: 16px;
+  }
+  .wrapper .header__world_search-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(17.7124652863px);
+            backdrop-filter: blur(17.7124652863px);
+  }
+  .wrapper .header__world_search-check h2 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .wrapper .header__world_search-check .fa-calendar {
+    color: #fff;
+  }
+  .wrapper .header__world_search-people {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(17.7124652863px);
+            backdrop-filter: blur(17.7124652863px);
+  }
+  .wrapper .header__world_search-people h2 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .wrapper .header__world_search-people .fa-user {
+    color: #fff;
+  }
+  .wrapper .header__world_search-btn {
+    display: flex;
+    width: 100%;
+  }
+  .wrapper .header__world_search-btn button {
+    background-color: #2659C3;
+    width: 100%;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=style.css.map */

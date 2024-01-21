@@ -1,0 +1,344 @@
+@import './_mixin';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1395px;
+    margin: 0 auto;
+    list-style: none;
+
+    .media__footer {
+        display: none;
+    }
+}
+
+.header {
+    background: url(./assets/images/image\ 1\ \(1\).png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    // .header__navbar
+
+    &__navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 20px;
+
+        & .fa-bars {
+            display: none;
+        }
+
+        // .header__navbar_logo
+
+        &_logo {
+            @include styleText(#fff, 22px, 700);
+        }
+
+        // .header__navbar_navigations
+
+        &_navigations {
+            & li {
+                display: flex;
+                gap: 20px;
+
+                & a {
+                    text-decoration: none;
+                    @include styleText(#fff, 20, 400);
+                }
+
+                & a:hover {
+                    border-bottom: 1px solid white;
+                }
+            }
+
+        }
+    }
+
+    &__world {
+        display: flex;
+        flex-direction: column;
+
+        padding: 0px 100px;
+
+        &_logo {
+            @include styleText(#fff, 50px, 800);
+            margin-top: 70px;
+        }
+
+        &_search {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding: 15px 25px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.40);
+            backdrop-filter: blur(17.712465286254883px);
+
+            &-destination {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 418px;
+
+                & input {
+                    width: 100%;
+                    border: none;
+                    background-color: transparent;
+                    outline: none;
+                }
+
+                & input::placeholder {
+                    @include styleText(#fff, 15px, 300)
+                }
+
+
+                & .fa-magnifying-glass {
+                    color: #fff;
+                    font-size: 16px;
+                }
+            }
+
+            &-check {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                & h2 {
+                    @include styleText(#fff, 15px, 300)
+                }
+
+                & .fa-calendar {
+                    color: #fff;
+                }
+            }
+
+
+            &-people {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                & h2 {
+                    @include styleText(#fff, 15px, 300)
+                }
+
+                & .fa-user {
+                    color: #fff;
+                }
+            }
+
+            &-btn {
+                display: flex;
+
+                & button {
+                    padding: 5px 30px;
+                    border: none;
+                    border-radius: 20px;
+                    @include styleText(#2659C3, 15px, 300);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .wrapper {
+        max-width: 375px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+
+        & .media__footer {
+            position: absolute;
+            bottom: 0;
+            display: inline-flex;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 5px;
+            background-color: #fff;
+            width: 100%;
+
+
+            // .media__footer
+
+            & .footer {
+
+
+                // .media__footer_functions
+
+                &-functions {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    &:hover{
+                        color: #2659C3;
+                    }
+
+                    & h1 {
+                        @include styleText(#999999, 14px, 400)
+                    }
+                    & .fa-solid{
+                        font-size: 22px;
+                        color: #999999;
+                    }
+                }
+            }
+        }
+
+        .header {
+            display: flex;
+            padding: 10px 15px;
+            flex-direction: column;
+
+
+            &__navbar {
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                & .fa-bars {
+                    display: inline-flex;
+                    font-size: 25px;
+                    color: #fff;
+                }
+
+                // .header__navbar_logo
+
+                &_logo {
+                    @include styleText(#fff, 17px, 700);
+                }
+
+                // .header__navbar_navigations
+
+                &_navigations {
+                    display: none;
+                }
+            }
+
+            &__world {
+                padding: 0;
+
+                &_logo {
+                    @include styleText(#fff, 30px, 800);
+                }
+
+                &_search {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0;
+                    border-radius: 18px;
+                    background-color: transparent;
+                    backdrop-filter: none;
+
+                    &-destination {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        width: 100%;
+                        border-radius: 20px;
+                        padding: 12px 15px;
+                        background: rgba(255, 255, 255, 0.40);
+                        backdrop-filter: blur(17.712465286254883px);
+
+                        & input {
+                            border: none;
+                            background-color: transparent;
+                            outline: none;
+                        }
+
+                        & input::placeholder {
+                            @include styleText(#fff, 15px, 300)
+                        }
+
+
+                        & .fa-magnifying-glass {
+                            color: #fff;
+                            font-size: 16px;
+                        }
+                    }
+
+                    &-check {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        width: 100%;
+                        border-radius: 20px;
+                        padding: 10px 15px;
+                        background: rgba(255, 255, 255, 0.40);
+                        backdrop-filter: blur(17.712465286254883px);
+
+                        & h2 {
+                            @include styleText(#fff, 15px, 300)
+                        }
+
+                        & .fa-calendar {
+                            color: #fff;
+                        }
+                    }
+
+
+                    &-people {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        width: 100%;
+                        border-radius: 20px;
+                        padding: 10px 15px;
+                        background: rgba(255, 255, 255, 0.40);
+                        backdrop-filter: blur(17.712465286254883px);
+
+                        & h2 {
+                            @include styleText(#fff, 15px, 300)
+                        }
+
+                        & .fa-user {
+                            color: #fff;
+                        }
+                    }
+
+                    &-btn {
+                        display: flex;
+                        width: 100%;
+
+                        & button {
+                            background-color: #2659C3;
+                            width: 100%;
+                            padding: 10px 30px;
+                            border: none;
+                            border-radius: 20px;
+                            @include styleText(#fff, 15px, 300);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
